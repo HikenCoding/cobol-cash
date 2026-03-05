@@ -10,11 +10,9 @@
        working-storage section.
        
        01 WAHL                                PIC 9(1).
-       01 Betrag                              PIC 9(7),99.                           
+       01 Betrag                              PIC 9(7)V99.                           
        01 Betrag-Formatiert                   PIC Z.ZZZ.ZZ9,99.
-
        01 Guthaben                            PIC 9(7)V99 VALUE 1000,00.
-
        01 Guthaben-Display                    PIC Z.ZZZ.ZZ9,99.
 
 
@@ -32,7 +30,11 @@
                display "Du hast du fuer EINZAHLEN entscheiden"
                display "Bitte gib den Betrag an, die du einzahlen willst"
                Accept Betrag
+               add Betrag to Guthaben
+               move Betrag to Betrag-Formatiert
+               move Guthaben to Guthaben-Display
                display "Der Bertrag von" Betrag-Formatiert " eingezahlt"
+               display "Neuer Kontostand: " Guthaben-Display
            else if WAHL = 2 then
                display "Du hast dich fuer AUSZAHLEN entschieden"
                display "Wie viel moechtest du den auszahlen?"
