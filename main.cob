@@ -26,6 +26,8 @@
            display "3 - KONTOSTAND".       
            Accept WAHL.
 
+
+
            if WAHL = 1 then
                display "Du hast du fuer EINZAHLEN entscheiden"
                display "Bitte gib den Betrag an, die du einzahlen willst"
@@ -38,6 +40,7 @@
                display " Du hast " Betrag-Formatiert " ausgezahlt"
 
            else if WAHL = 3 then
+               move Guthaben to Guthaben-Display
                display "Dein Kontostand liegt bei " Guthaben " Euro"
            else    
                display "Ungueltige Wahl! Bitte waehle 1 und 2"
