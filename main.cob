@@ -16,11 +16,11 @@
            
 
            if WAHL = 1 then
-               display "Du hast du fuer EINZAHLEN entscheiden".
+               display "Du hast du fuer EINZAHLEN entscheiden"
            else if WAHL = 2 then
-               display "Du hast dich fuer AUSZAHLEN entschieden".
+               display "Du hast dich fuer AUSZAHLEN entschieden"
            else    
-               display "Ungueltige Wahl! Bitte waehle 1 und 2".
+               display "Ungueltige Wahl! Bitte waehle 1 und 2"
            end-if.
 
            stop run.
