@@ -29,6 +29,9 @@
                display "Der Bertrag von" Betrag-Formatiert " eingezahlt"
            else if WAHL = 2 then
                display "Du hast dich fuer AUSZAHLEN entschieden"
+               display "Wie viel moechtest du den auszahlen?"
+               accept Betrag
+               display " Du hast " Betrag-Formatiert " ausgezahlt"
            else    
                display "Ungueltige Wahl! Bitte waehle 1 und 2"
            end-if.
