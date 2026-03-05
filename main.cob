@@ -9,17 +9,21 @@
        data division.
        working-storage section.
        
-       01 WAHL                                         PIC 9(1).
-       01 Betrag                                       PIC 9(7),99.                           
-       01 Betrag-Formatiert                            PIC Z.ZZZ.ZZ9,99.
+       01 WAHL                                PIC 9(1).
+       01 Betrag                              PIC 9(7),99.                           
+       01 Betrag-Formatiert                   PIC Z.ZZZ.ZZ9,99.
+
+       01 Guthaben                            PIC 9(7)V99 VALUE 1000,00.
+
+       01 Guthaben-Display                    PIC Z.ZZZ.ZZ9,99.
 
 
        procedure division.
            display "Willkommen bei der Erkan-Bank".
            display "Was möchtest du tun?".
            display "1 - EINZAHLEN".
-           display "2 - AUSZAHLEN".           
-
+           display "2 - AUSZAHLEN".    
+           display "3 - KONTOSTAND".       
            Accept WAHL.
 
            if WAHL = 1 then
@@ -32,6 +36,9 @@
                display "Wie viel moechtest du den auszahlen?"
                accept Betrag
                display " Du hast " Betrag-Formatiert " ausgezahlt"
+
+           else if WAHL = 3 then
+               display "Dein Kontostand liegt bei " Guthaben " Euro"
            else    
                display "Ungueltige Wahl! Bitte waehle 1 und 2"
            end-if.
