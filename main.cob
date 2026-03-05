@@ -1,10 +1,10 @@
-       identification division
+       identification division.
        program-id. bank-auswahl.
 
        data division.
        working-storage section.
        
-       01 WAHL             PIC 9(1)
+       01 WAHL             PIC 9(1).
 
 
        procedure division.
