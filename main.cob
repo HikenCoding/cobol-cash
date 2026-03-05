@@ -8,7 +8,6 @@
 
 
        procedure division.
-       main-logic.
            display "Willkommen bei der Erkan-Bank".
            display "Was möchtest du tun?".
            display "1 - EINZAHLEN".
