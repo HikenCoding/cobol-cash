@@ -41,7 +41,7 @@
 
            else if WAHL = 3 then
                move Guthaben to Guthaben-Display
-               display "Dein Kontostand liegt bei " Guthaben " Euro"
+               display "Dein Kontostand liegt bei " Guthaben-Display 
            else    
                display "Ungueltige Wahl! Bitte waehle 1 und 2"
            end-if.
