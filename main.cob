@@ -1,22 +1,32 @@
        identification division.
-       program-id. bank-auswahl.
+        program-id. bank-auswahl.
+
+       environment division.
+       configuration section.
+       special-names.
+           decimal-point is comma. 
 
        data division.
        working-storage section.
        
-       01 WAHL             PIC 9(1).
+       01 WAHL                                         PIC 9(1).
+       01 Betrag                                       PIC 9(7),99.                           
+       01 Betrag-Formatiert                            PIC Z.ZZZ.ZZ9,99.
 
 
        procedure division.
            display "Willkommen bei der Erkan-Bank".
            display "Was möchtest du tun?".
            display "1 - EINZAHLEN".
-           display "2 - AUSZAHLEN".
+           display "2 - AUSZAHLEN".           
 
-           
+           Accept WAHL.
 
            if WAHL = 1 then
                display "Du hast du fuer EINZAHLEN entscheiden"
+               display "Bitte gib den Betrag an, die du einzahlen willst"
+               Accept Betrag
+               display "Der Bertrag von" Betrag-Formatiert " eingezahlt"
            else if WAHL = 2 then
                display "Du hast dich fuer AUSZAHLEN entschieden"
            else    
